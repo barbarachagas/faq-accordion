@@ -1,0 +1,208 @@
+// COLORS
+$white: #ffffff;
+$light-pink: #f9f0ff;
+$grayish-purple: hsl(292, 16%, 49%);
+$dark-purple: hsl(292, 42%, 14%);
+
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;700&display=swap");
+
+// RESET
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+// END RESET
+body {
+  font-family: "Work Sans";
+  background-color: $light-pink;
+  background-image: url("../assets/images/background-pattern-desktop.svg");
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+
+  .accordion {
+    border-radius: 16px;
+    padding: 40px;
+    background-color: $white;
+    width: 50%;
+    &--title {
+      font-weight: 700;
+      font-size: 56px;
+      color: $dark-purple;
+    }
+    &--question {
+      padding: 24px 0;
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      color: $dark-purple;
+      font-size: 18px;
+      font-weight: 700;
+      line-height: normal;
+      background-color: transparent;
+      border: none;
+      .icon-minus {
+        display: none;
+      }
+      &:hover {
+        color: hsla(281, 83%, 54%, 1);
+      }
+    }
+    &--answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+      color: $grayish-purple;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 23px; /* 143.75% */
+    }
+  }
+
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: $dark-purple;
+    color: $white;
+    padding: 16px 0;
+    a {
+      color: $light-pink;
+      &:hover {
+        color: $grayish-purple;
+      }
+    }
+  }
+}
