@@ -147,12 +147,15 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-
+  padding: 40px;
   .accordion {
     border-radius: 16px;
     padding: 40px;
     background-color: $white;
     width: 50%;
+    @media screen and (max-width: 1024px) {
+      width: 80%;
+    }
     &--title {
       font-weight: 700;
       font-size: 56px;
@@ -171,11 +174,17 @@ body {
       line-height: normal;
       background-color: transparent;
       border: none;
-      .icon-minus {
-        display: none;
+      @media screen and (max-width: 1024px) {
+        font-size: 16px;
       }
       &:hover {
         color: hsla(281, 83%, 54%, 1);
+      }
+      &.active {
+        color: hsla(281, 83%, 54%, 1);
+      }
+      .icon-minus {
+        display: none;
       }
     }
     &--answer {
@@ -186,6 +195,9 @@ body {
       font-size: 16px;
       font-weight: 400;
       line-height: 23px; /* 143.75% */
+      @media screen and (max-width: 1024px) {
+        font-size: 14px;
+      }
     }
   }
 
