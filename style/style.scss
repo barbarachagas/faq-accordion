@@ -148,6 +148,9 @@ body {
   justify-content: center;
   height: 100vh;
   padding: 40px;
+  @media screen and (max-width: 1024px) {
+    background-image: url("../assets/images/background-pattern-mobile.svg");
+  }
   .accordion {
     border-radius: 16px;
     padding: 40px;
